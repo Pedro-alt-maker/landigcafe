@@ -1,0 +1,422 @@
+@import url('responsive.css');
+@font-face {
+    font-family:Dancing ;
+    src: url('/landing_cafe/src/font/Dancing_Script/static/DancingScript-Regular.ttf');
+}
+*{
+    padding: 0;
+    margin: 0;
+    transition: .1s;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--font_segeo);
+    
+}
+:root{
+    --font_segeo:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font_decoration: cursive;
+    --cor_fundo:#f6ebda;
+    --cor_btn_price_text:#ff902a;
+    --cor_btn:#2f2105;
+    --cor_formas_diversos:#f9d9aa;
+}
+body{
+    background-color: var(--cor_fundo);
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 6%;
+    position: sticky;
+    top: -4px;
+    background-color: var(--cor_fundo);
+    z-index: 100;
+}
+ header .logo{
+    width: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+header .logo h1{
+    font-size: 19px;
+    display: flex;
+    gap: 5px;
+    font-family: 'Dancing';
+}
+header .logo span {
+    font-family: 'Dancing';
+    color: var(--cor_btn_price_text);
+}
+ header .logo img{
+    width: 100%;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav .navbar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+nav .navbar .item{
+    color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 19px;
+    justify-content: center;
+}
+nav .navbar .item.active{
+    color: var(--cor_btn_price_text);
+    font-weight: bold;
+}
+nav .navbar .item::after{
+    content: '';
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+    height: 3px;
+    background-color: var(--cor_btn_price_text);
+    bottom: 0;
+}
+nav .navbar .item:hover::after{
+    width: 100%;
+
+}
+section{
+    padding: 12px 5%;
+}
+button{
+    cursor: pointer;
+}
+.boxsearch{
+    display: flex;
+    gap: 30px;
+}
+.price{
+    border: none;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    margin-left: 90px;
+}
+
+ .cardpopular i{
+    color: var(--cor_btn_price_text);
+}
+.boxsearch input{
+    border-radius: 20px;
+    outline:none ;
+    border:none;
+    height: 38px;
+    background-image: url(/landing_cafe/src/image/lupa\ \(1\).png);
+    background-size: 22px;
+    background-position: 3%;
+    background-repeat: no-repeat;
+    padding:0 12%;
+    transition: boder-shadow .5s ease-in-out, .5s ease-in-out;
+    width: 240px;
+    box-shadow: 0 4px 5px rgb(0,0,0,0.1);
+}
+.boxsearch input:hover{
+    box-shadow: 0 5px 6px rgb(0,0,0,0.2);
+    transform: scale(1.05);
+}
+.home{
+    display: flex;
+    min-height: 100vh;
+    gap:98px;
+}
+.secthome{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 45%;
+}
+.boxDescription{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.boxDescription p{
+    color: #777;
+    font-size: 1.2rem;
+}
+.boxbtn{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+}
+.boxbtn a:hover{
+    color: var(--cor_btn);
+}
+.btn{
+    background-color: var(--cor_btn);
+    padding: 12px 30px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    font-size: 15px;
+    font-weight: 400;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgb(0,0,0,0.1), 0 2px 4px rgb(0,0,0,0.1) ;
+    color: #fff;
+    transition: background.5s,  box-shadow .5s, .5s ;
+}
+.btn span{
+    color: #fff;
+    padding: 8px;
+}
+.boxbtn a{
+    color: var(--cor_btn_price_text);
+    font-weight: bold;
+    transition: .5s;
+}
+.btn:hover{
+ background-color: var(--cor_btn_price_text);
+ box-shadow: 0 4px 6px rgb(0,0,0,0.2), 0 2px 4px rgb(0,0,0,0.2)
+}
+.banner{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.banner img{
+    width: 60%;
+    height: 60%;
+}
+.secthome h1{
+    font-size: 50px;
+}
+.secthome h1 span{
+    color: var(--cor_btn_price_text)
+}
+.subtitle_deretion{
+    position: relative;
+}
+.subtitle_deretion::after{
+    position: absolute;
+    content: " ";
+    background-color: var(--cor_btn_price_text);
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -3px;
+}
+.cardPopular{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    min-height: 100vh;
+    position: relative;
+}
+.cardpopulares{
+    display: grid;
+    gap: 30px;
+    margin-top: 7%;
+    margin-bottom: 21%;
+    grid-template-columns: repeat(3,1fr);
+}
+.cardpopular{
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 4px 5px rgb(0,0,0,0.1);
+    border-radius: 10px;
+    z-index: 4;
+}
+.cardpopular img{
+    width: 100%;
+    border-radius: 14px;
+}
+.cardDescripition_popular{
+    display: flex;
+    justify-content: space-between;
+}
+.avaliacao{
+    padding: 0 18px;
+    font-weight: bold;
+}
+.cardbtn_popular{
+    display: flex;
+    justify-content: space-between;
+}
+.boxcardbtn{
+    display: flex;
+    gap: 20px;
+    margin-top: 18px;
+}
+.boxcardbtn button{
+    background-color: transparent;
+    border: 1px solid var(--cor_btn_price_text);
+    padding:3px 8px;
+    width: 59px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor_btn_price_text);
+    transition: background.5s,  box-shadow .5s, .5s ;
+}
+.boxcardbtn button:hover{
+    box-shadow: 0 4px 6px rgb(0,0,0,0.1), 0 2px 4px rgb(0,0,0,0.1) ;
+    color: #fff;
+    background-color: var(--cor_btn_price_text);
+}
+.formabox{
+    width: 1300px;
+    position: absolute;
+    top: 39%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 30px;
+    border-radius: 50px;
+    height: 300px;
+    background-color: var(--cor_formas_diversos);
+    padding: 0 20px;
+}
+.sobre{
+    display: flex;
+    gap: 90px;
+    
+}
+.sobre_imag{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.sobre_imag img{
+    width: 100%;
+    height: 700px;
+    border-radius: 20px;
+}
+.sobre_description{
+    display: flex;
+    width: 65%;
+    align-items: start;
+    flex-direction: column;
+}
+.sobre_description .boxbtn{
+    margin-top: 30px;
+}
+.sobre_description h3{
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.sobre_description p{
+    color: #777;
+}
+.produto{
+    margin-top: 24%;
+    min-height: 100vh;
+    background-color: #fff;
+}
+.sectionProdutos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+
+}
+.caixa_pesq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 7%;
+    margin-bottom: 60px;
+}
+
+.caixa_pesq .boxsearch_mobile input{
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline:none ;
+    border:none;
+    height: 38px;
+    background-image: url(/landing_cafe/src/image/lupa\ \(1\).png);
+    background-size: 22px;
+    background-position: 3%;
+    background-repeat: no-repeat;
+    padding:0 12%;
+    transition: boder-shadow .5s ease-in-out, .5s ease-in-out;
+    width:100%;
+    box-shadow: 0 4px 5px rgb(0,0,0,0.1);
+}
+.caixa_pesq  .boxsearch_mobile input:hover{
+    box-shadow: 0 5px 6px rgb(0,0,0,0.2);
+    transform: scale(1.05);
+}
+.caixa_pesq .boxsearch_mobile{
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    align-items: center;
+    
+}
+footer{
+    background-color: #0a0a0a;
+    padding: 28px 6%;
+    margin-top: 19%;
+}
+footer p{
+    color: #fff;
+    font-weight: bold;
+}
+.direction{
+    background-color: var(--cor_btn_price_text);
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    display: none;
+    border: none;
+    box-shadow: 3px 20px 30px rgb(0,0,0,0.3);
+    position:fixed;
+    z-index: 100;
+    border-radius: 50%;
+    right: 15px;
+    color: #fff;
+    bottom: 90px;
+    animation: animarbtn 4s infinite ease-in-out;
+}
+@keyframes animarbtn {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+.menu{
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    display: none;
+    z-index: 100;
+}
